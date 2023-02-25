@@ -113,7 +113,7 @@ const Voterdetails = () => {
           <input className="rounded-xl shadow-xl w-[250px]" required type="text" name="sex" value={sex} onChange={(e) => setSex(e.target.value)}/>
           </div>
           <div className="pt-8">
-          <button type="submit" className="  text-[20px] text-purple-800 w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl px-[40px] py-[10px] border border-purple-800 ml-[40%] bg-white" onClick={()=>voterdetails()}>Submit</button>
+          <button type="submit" className="text-[20px] text-purple-800 w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl px-[40px] py-[10px] border border-purple-800 ml-[40%] bg-white" onClick={()=>voterdetails()}>Submit</button>
           </div>
         </div>
       </div>
