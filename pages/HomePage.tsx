@@ -22,7 +22,7 @@ const HomePage = () => {
         <div className='flex flex-row w-[100vw] h-[fit-content] p-[20px] justify-around'>
             <Link href='/VoterDetails'><button className='text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white'>Continue as Voter</button></Link>
             <Link href='/CandidateDetails'><button className='text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white'>Register as Candidate</button></Link>
-            <Link href='/result'><button className='text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white'>View Standings</button></Link>
+            <Link href='/Results'><button className='text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white'>View Standings</button></Link>
         </div>
         </div>
     );

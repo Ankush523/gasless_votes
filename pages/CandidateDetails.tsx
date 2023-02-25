@@ -33,7 +33,7 @@ const CandidateDetails = () => {
         <div className='p-4'>
             <div className='flex flex-col items-center justify-center w-[100vw] p-[20px] h-[fit-content] px-20'>
                 <div className='flex flex-col w-[60%] h-[fit-content] shadow-xl rounded-md bg-slate-100 p-[30px]'>
-                    <label className=" text-[30px] mb-10 text-purple-900">Enter Your Details</label>
+                <label className=" text-[30px] mb-10 text-purple-900 pl-[38%]  border-b border-b-purple-700">Enter Your Details </label>
                     <div className="flex flex-row p-5  justify-between">
                         <label className="  w-[fit-content] px-2 py-2 text-[20px] text-purple-600">Name : </label>
                         <input className="rounded-xl shadow-xl w-[250px]" required type="text" value={name} name="name" onChange={(e) => setName(e.target.value)}/>
