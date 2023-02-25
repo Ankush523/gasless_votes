@@ -8,6 +8,7 @@ const Results = () => {
     const {data:signer} = useSigner();
     const contract = new ethers.Contract("0x44f454d6C2edc39b716065014fD5c74a98Db7B38", Voteabi, signer||provider);
     const[lists,setList] = useState<Object[]>([]);
+
     
     const getList = async() => {
         var len = await contract.receiveCid();
@@ -17,8 +18,15 @@ const Results = () => {
         for(let i=1;i<=parseList;i++)
         {
             var list = await contract.candidatelist(i);
+            console.log(list);
             setList((lists) => [...lists,list])
         }
+    }
+
+    type lists = {
+        name:string,
+        party_name:string,
+        count:number
     }
 
     return (
@@ -38,11 +46,11 @@ const Results = () => {
                 <div className='flex flex-col-reverse w-[100%] h-[fit-content]' >
                 {
 
-                    lists.map((list,index)=>(
+                    lists.map((list:any,index:any)=>(
                         <div key={index} className=''>
                             <div className='flex flex-row w-[100%] justify-around p-1 '>
-                            <label className='font-semi-bold text-[20px] text-purple-800'>{lists[index].name} - ({lists[index].party_name})</label>
-                            <label className='font-semi-bold text-[20px] text-purple-800'>{(lists[index].count).toString()}</label>
+                            <label className='font-semi-bold text-[20px] text-purple-800'>{list.name} - ({list.party_name})</label>
+                            <label className='font-semi-bold text-[20px] text-purple-800'>{(list.count).toString()}</label>
                             </div>
                         <br/>
                         <br/>

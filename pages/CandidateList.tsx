@@ -103,7 +103,7 @@ const CandidateList = () => {
                     <label className='text-purple-600 w-[20%]'>Vote</label>
                 </div>
                 <div className="flex flex-col-reverse w-[100%] h-[fit-content] pt-5">
-                    {lists.map((list, index) => (
+                    {lists.map((list:any, index:any) => (
                     <div key="id" className="mb-[40px]">
                         <div className="flex flex-row w-[100%] p-1">
                             <label className=" w-[20%] text-left font-semi-bold text-[20px] text-black">{list.name}</label>
