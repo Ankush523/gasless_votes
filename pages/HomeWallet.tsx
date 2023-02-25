@@ -72,9 +72,9 @@ const HomeWallet = () => {
           <div>
             <h2>Smart Account Address</h2>
             <p>{scwAddress}</p>
-            <button onClick={gaslessTransfer}>Gasless Transfer</button>
           </div>
         )}
+        <button onClick={gaslessTransfer}>Gasless Transfer</button>
       </main>
     </div>
   );
