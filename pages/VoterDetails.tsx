@@ -81,19 +81,17 @@ const Voterdetails = () => {
     <div className='bg-white h-[100vh]'>
       <div className="flex flex-row justify-between  mx-[40px]">
         <label className="text-[55px] text-purple-800 ">WELCOME TO VOTER PORTAL</label>
-        {/* <button className="text-xl text-white bg-purple-800 my-[20px] px-[20px] rounded-xl shadow-2xl border border-purple-800 hover:text-purple-800 hover:bg-white" onClick={() => login()}>Smart Wallet : {(scwAddress.toString()).slice(0,8)}...{(scwAddress.toString()).slice(37)}</button> */}
-        {scwLoading && <h2 className='text-black'>Loading Smart Account...</h2>}
+        {scwLoading && <h2 className='text-xl text-white bg-purple-800 my-[25px] px-[20px] rounded-lg shadow-2xl border border-purple-800 '>Loading Smart Account...</h2>}
         {scwAddress && (
             <div>
-                <h2 className='text-black'>Smart Account Address</h2>
-                <p className='text-black'>{swAddress}</p>
+                <p className='text-xl text-white bg-purple-800 my-[10px] py-[10px] px-[20px] rounded-lg shadow-2xl border border-purple-800 '>Smart Account Address : {(swAddress.toString()).slice(0,8)}...{(swAddress.toString()).slice(37)}</p>
             </div>
         )}
       </div>
       <div className="p-4">
         <div className="flex flex-col items-center w-[100vw] h-[fit-content] p-[20px] justify-center px-20">
         <div className='flex flex-col w-[60%] h-[fit-content] shadow-xl rounded-md bg-slate-100 p-[30px]'>
-      <label className=" text-[30px] mb-10 text-purple-900">Enter Your Details </label>
+      <label className=" text-[30px] mb-10 text-purple-900 pl-[38%]  border-b border-b-purple-700">Enter Your Details </label>
         <div className="flex flex-row p-5 justify-between">
         <label className="   w-[fit-content] p-1 px-2 py-2 text-[20px] text-purple-600">Name:</label>
           <input className="rounded-xl shadow-xl w-[250px]" required type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
