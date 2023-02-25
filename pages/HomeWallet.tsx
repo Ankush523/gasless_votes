@@ -46,8 +46,8 @@ const HomeWallet = () => {
       return;
     }
     // let iface = new ethers.utils.Interface(votechainabi)
-    //   let det = iface.encodeFunctionData("userregister",[name, age, contactnumber, sex])
-    //   console.log(det)
+    // let det = iface.encodeFunctionData("userregister",[name, age, contactnumber, sex])
+    // console.log(det)
     await smartAccount.init();
     console.log("Smart Account", smartAccount);
     const tx={

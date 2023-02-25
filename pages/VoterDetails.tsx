@@ -5,6 +5,7 @@ import { ChainId } from "@biconomy/core-types";
 import SmartAccount from "@biconomy/smart-account";
 import { useAccount, useSigner } from "wagmi";
 import Voteabi from "../SmartContracts/ABIs/VoteABI.json";
+import Link from 'next/link';
 
 const Voterdetails = () => {
 
@@ -68,8 +69,8 @@ const Voterdetails = () => {
             value:ethers.utils.parseEther("0"),
             data:det
             }
-            const txResponse2 = await smartAccount.sendGaslessTransaction({ transaction: tx });
-            console.log(txResponse2);
+            const txResponse = await smartAccount.sendGaslessTransaction({ transaction: tx });
+            console.log(txResponse);
         }
         else
         {
@@ -118,7 +119,7 @@ const Voterdetails = () => {
         </div>
       </div>
       <div className="ml-[45%]">
-        <a href='/castvote'><button className="  text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white ">Continue to Vote</button></a>
+        <Link href='/CandidateList'><button className="  text-[20px] w-[fit-content] h-[fit-content] rounded-md hover:shadow-xl p-[8px] bg-purple-800 text-white ">Continue to Vote</button></Link>
       </div>
     </div>
     </div>
