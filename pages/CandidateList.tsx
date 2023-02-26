@@ -70,7 +70,7 @@ const CandidateList = () => {
             }
             var len = await contract.receiveCid();
             let iface = new ethers.utils.Interface(Voteabi);
-            let det = iface.encodeFunctionData("votecount", [len]);
+            let det = iface.encodeFunctionData("votecount", [key]);
             console.log(det);
             await smartAccount.init();
             console.log("Smart Account", smartAccount);
