@@ -6,7 +6,7 @@ const Results = () => {
 
     const provider = useProvider();
     const {data:signer} = useSigner();
-    const contract = new ethers.Contract("0x44f454d6C2edc39b716065014fD5c74a98Db7B38", Voteabi, signer||provider);
+    const contract = new ethers.Contract("0xEDa8aD32Ef9BD4b79ADD514892591673819E73A5", Voteabi, signer||provider);
     const[lists,setList] = useState<Object[]>([]);
 
     

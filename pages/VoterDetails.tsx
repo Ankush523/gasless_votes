@@ -64,7 +64,7 @@ const Voterdetails = () => {
             await smartAccount.init();
             console.log("Smart Account", smartAccount);
             const tx={
-            to:"0x44f454d6C2edc39b716065014fD5c74a98Db7B38",
+            to:"0xEDa8aD32Ef9BD4b79ADD514892591673819E73A5",
             from:smartAccount.address,
             value:ethers.utils.parseEther("0"),
             data:det
